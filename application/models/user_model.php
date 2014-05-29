@@ -20,7 +20,8 @@ class User_model extends CI_Model {
         $insert_data = array(
             'username' => $data['username'],
             'password' => md5($data['password']),
-            'register_time' => time()
+            'register_time' => time(),
+            'last_login_time' => time()
         );
 
         $ret = $this->db->insert($this->tb_name, $insert_data);

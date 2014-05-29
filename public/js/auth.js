@@ -41,7 +41,7 @@ function ajax (url, username, password) {
             if (data.status) {
                 show_msg(data.msg, 'success');
                 var code = 'window.location.href="'+data.url+'"';
-                window.setTimeout(code, 2000);
+                window.setTimeout(code, 1000);
             } else {
                 show_msg(data.msg, 'danger');
             }
@@ -53,7 +53,7 @@ function ajax (url, username, password) {
 }
 
 
-function show_msg (msg, type) {
+function show_msg (msg, type, time) {
     if (!type) {
         type = 'info';
     }
@@ -66,5 +66,7 @@ function show_msg (msg, type) {
     alert.addClass(class_name);
     alert.html(msg);
     alert.fadeIn();
-    alert.fadeOut(3000);
+    if (time) {
+        alert.fadeOut(time);
+    }
 }

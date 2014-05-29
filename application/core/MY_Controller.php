@@ -10,6 +10,11 @@ class MY_Controller extends CI_Controller {
         parent::__construct();
         $this->load->model('user_model');
 
+        $this->_data['site_domain'] = '127.0.0.1:3000';
+        $this->_data['site_url'] = 'http://'.$this->_data['site_domain'];
+        $this->_data['site_name'] = '多用户博客系统';
+        $this->_data['is_login'] = $this->_is_login();
+
         if (ENVIRONMENT === 'development') {
             $this->output->enable_profiler(true);
         }
@@ -20,11 +25,6 @@ class MY_Controller extends CI_Controller {
      * 自定义模版加载方法
      */
     protected function _view ($tpl) {
-        $this->_data['site_domain'] = '127.0.0.1:3000';
-        $this->_data['site_url'] = 'http://'.$this->_data['site_domain'];
-        $this->_data['site_name'] = '多用户博客系统';
-        $this->_data['is_login'] = $this->_is_login();
-
         $this->load->view($tpl, $this->_data);
     }
 

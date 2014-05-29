@@ -34,11 +34,11 @@
                 <div class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <?php if ($is_login): ?>
-                        <a class="btn btn-info" href="">分类</a>
-                        <a class="btn btn-primary" href="">标签</a>
-                        <a class="btn btn-warning" href="">文章</a>
-                        <a class="btn btn-danger" href="">评论</a>
-                        <a class="btn btn-success" href="<?php echo base_url('login_out'); ?>">注销</a>
+                        <a class="btn btn-info" href="<?php echo base_url('cate'); ?>">分类</a>
+                        <a class="btn btn-primary" href="<?php echo base_url('tag'); ?>">标签</a>
+                        <a class="btn btn-warning" href="<?php echo base_url('post'); ?>">文章</a>
+                        <a class="btn btn-danger" href="<?php echo base_url('comment'); ?>">评论</a>
+                        <a class="btn btn-success" href="<?php echo base_url('loginout'); ?>">注销</a>
                         <?php else: ?>
                         <a class="btn btn-primary" href="<?php echo base_url('login'); ?>">登录</a>
                         <a class="btn btn-info" href="<?php echo base_url('register'); ?>">注册</a>

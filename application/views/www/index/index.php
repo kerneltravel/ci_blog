@@ -33,5 +33,4 @@
 
 
 <?php $this->load->view('templates/footer', array(
-    'js' => array('www/index.js')
 )); ?>

@@ -1,7 +1,7 @@
 $(function () {
     if (!is_index()) {  // 非首页禁止IE浏览器访问
         if (is_ie()) {
-            alert('本站不支持IE访问');
+            alert('本站不支持IE访问，请使用Chrome或Firefox');
             window.location.href = '/';
         }
     }
@@ -29,7 +29,7 @@ function is_index () {
  */
 function is_ie () {
     var info = navigator.userAgent.toLowerCase();
-    if (info.indexOf('meis') > 0) {
+    if (info.indexOf('msie') > 0) {
         return true;
     }
     return false;

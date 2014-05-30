@@ -37,7 +37,7 @@ class MY_Controller extends CI_Controller {
         if ($ses && @$ses['uid']) {
             $data = $this->user_model->find_by_uid($ses['uid']);
             if ($data and $ses['password'] == $data['password'] and $ses['last_login'] == $data['last_login_time']) {
-                $this->_user['uid'] = $data['id'];
+                $this->_user['uid'] = intval($data['id']);
                 $this->_user['username'] = $data['username'];
                 return true;
             }

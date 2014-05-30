@@ -25,4 +25,18 @@ class Category extends MY_Controller {
         $this->_view('home/category/add');
     }
 
+
+    /**
+     * 执行添加
+     */
+    public function add_action () {
+        $name = trim($this->input->post('name'));
+        $desc = trim($this->input->post('desc'));
+
+        if (!$name or !$desc) {
+            redirect('/');
+            exit();
+        }
+    }
+
 }

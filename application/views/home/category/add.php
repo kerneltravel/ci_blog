@@ -10,7 +10,7 @@
         )); ?>
         <div class="form-group">
             <?php echo form_input(array(
-                'id'          => 'name',
+                'name'        => 'name',
                 'class'       => 'form-control',
                 'placeholder' => '分类名',
                 'required'    => 'true',
@@ -20,9 +20,8 @@
 
         <div class="form-group">
             <?php echo form_textarea(array(
-                'id'          => 'desc',
-                'class'       => 'form-control',
                 'name'        => 'desc',
+                'class'       => 'form-control',
                 'placeholder' => '分类描述',
                 'required'    => 'true'
             )); ?>
